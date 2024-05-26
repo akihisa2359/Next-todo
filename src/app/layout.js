@@ -1,6 +1,7 @@
 import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import "./destyle.css";
+import "./globalicon.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const notoSansJP = Noto_Sans_JP({ preload: false });
