@@ -1,5 +1,3 @@
-import useModal from "../hooks/useModal";
-
 export default function Modal({ children, onClick }) {
   return (
     <div
