@@ -1,8 +1,11 @@
+"use client";
+
 import Task from "./components/task";
 import NewButton from "./components/buttons/new";
+import { useState } from "react";
 
 export default function Home() {
-  const tasks = ["hoge", "fuga", "piyo", "aaa"];
+  const [tasks, setTasks] = useState(["hoge", "fuga", "piyo", "aaa"]);
 
   return (
     <main>
@@ -19,7 +22,12 @@ export default function Home() {
             <Task text={task} />
           </div>
         ))}
-        <NewButton />
+        <NewButton
+          onCreate={(task) => {
+            const newTasks = [...tasks, task];
+            setTasks(newTasks);
+          }}
+        />
       </div>
     </main>
   );

@@ -4,7 +4,7 @@ import useModal from "@/app/hooks/useModal";
 import Icon from "../icon";
 import Modal from "../modal";
 
-export default function NewButton() {
+export default function NewButton({ onCreate }) {
   // animationが反応しなくなる（rotateするがdurationが効かない）ため利用しない
   // const SpButton = ({ children }) => (
   //   <div className="md:hidden">{children}</div>
@@ -22,6 +22,7 @@ export default function NewButton() {
         <Modal onClick={hide}>
           <div className="w-[80vw] max-w-[300px] h-[50vh] bg-white rounded-2xl">
             new task
+            <button onClick={() => onCreate("new")}>create</button>
           </div>
         </Modal>
       )}
