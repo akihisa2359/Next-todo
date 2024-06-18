@@ -14,7 +14,6 @@ export default function Home() {
 
   const selectedTask =
     selectedTaskIndex === null ? null : tasks[selectedTaskIndex];
-  console.log("selectedTask", selectedTask);
 
   return (
     <main>

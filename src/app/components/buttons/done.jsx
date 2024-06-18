@@ -1,6 +1,6 @@
 "use client";
 
-import Icon from "../icon";
+import Icon from "../myIcon";
 
 export default function DoneButton({ done, onClick }) {
   return (

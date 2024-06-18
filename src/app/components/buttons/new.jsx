@@ -1,7 +1,7 @@
 "use client";
 
 import useModal from "src/app/hooks/useModal";
-import Icon from "../icon";
+import Icon from "../myIcon";
 import Modal from "../modal";
 import TaskForm from "../taskForm";
 

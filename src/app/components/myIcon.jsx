@@ -1,3 +1,5 @@
+// ファイル名がicon.jsxだと何故かbuildに失敗するためmyIcon.jsxとした
+
 export default function Icon({ name, px = 24, weight = 400 }) {
   return (
     <span
