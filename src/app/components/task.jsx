@@ -2,26 +2,16 @@
 
 import { useState } from "react";
 import DoneButton from "./buttons/done";
-import Modal from "./modal";
-import useModal from "../hooks/useModal";
 
-export default function Task({ text }) {
+export default function Task({ text, onClick }) {
   const [done, setDone] = useState(false);
-  const { visible, show, hide } = useModal();
 
   return (
     <div>
-      {visible && (
-        <Modal onClick={hide}>
-          <div className="w-[80vw] max-w-[300px] h-[50vh] bg-white rounded-2xl">
-            {text}
-          </div>
-        </Modal>
-      )}
       <div
         className="flex items-center h-10 px-4 rounded-full text-sm shadow-md bg-white
          cursor-pointer hover:shadow-lg transition-shadow duration-300"
-        onClick={show}
+        onClick={onClick}
       >
         <div
           className={`flex-[9] transition-opacity duration-500 text-gray-600 ${

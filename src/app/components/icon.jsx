@@ -1,9 +1,9 @@
 export default function Icon({ name, px = 24, weight = 400 }) {
-  const fontSize = `text-[${px}px]`;
   return (
     <span
-      className={`material-symbols-outlined ${fontSize}`}
+      className={`material-symbols-outlined`}
       style={{
+        fontSize: `${px}px`, // lassNameで指定するとCSSが適用されないことがあるためstyleで指定する
         fontVariationSettings: `"FILL" 0, "wght" ${weight}, "GRAD" 0, "opsz" 24`,
       }}
     >
